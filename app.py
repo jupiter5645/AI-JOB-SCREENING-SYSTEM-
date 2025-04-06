@@ -1,4 +1,8 @@
 import streamlit as st
+
+# Set page config FIRST
+st.set_page_config(page_title="AI Job Screening System | XYZ Corp", layout="centered")
+
 # Custom background color - Accenture purple
 st.markdown(
     """
@@ -45,8 +49,7 @@ def match_resume_skills(resume_text, job_keywords):
     resume_keywords = extract_keywords(resume_text)
     return resume_keywords.intersection(job_keywords)
 
-# Streamlit page config
-st.set_page_config(page_title="AI Job Screening System | XYZ Corp", layout="centered")
+# App title
 st.title("🎯 AI Job Screening System - XYZ Corp")
 
 # Step 1: Job Description
@@ -98,10 +101,8 @@ if resume_file and job_keywords:
                 st.markdown(f"""
                 ---
                 📩 A confirmation email will be sent to **{email}**.  
-
                 💻 The interview will be conducted via **Microsoft Teams**.  
-                🔗 The link will be shared with you **just before the interview day**.
-
+                🔗 The link will be shared with you **just before the interview day**.  
                 🔁 You can revisit this page if you'd like to reschedule.
                 """)
             else:
