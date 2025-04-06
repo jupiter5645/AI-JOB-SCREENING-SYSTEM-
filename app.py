@@ -1,4 +1,17 @@
 import streamlit as st
+# Custom background color - Accenture purple
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #A100FF;
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 import spacy
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 import PyPDF2
